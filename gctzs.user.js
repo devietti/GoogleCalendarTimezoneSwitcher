@@ -68,7 +68,7 @@ function gctzsMain(selectedTZ) {
         const secondTZs = tgTable.getElementsByClassName("tg-time-sec");
         
         if ( primaryTZs.length != secondTZs.length ) {
-            alert( "TZ string arrays don't match" );
+            // secondary timezone display is disabled
             return;
         }
 
@@ -79,6 +79,15 @@ function gctzsMain(selectedTZ) {
             var terStr = pri.tz( choiceTZ ).format( "ha" ); // compute 2nd tz
             secondTZs[i].innerHTML = terStr;
         }
+    }
+
+    const tgTable = document.getElementById("tgTable");
+    const primaryTZs = tgTable.getElementsByClassName("tg-time-pri");
+    const secondTZs = tgTable.getElementsByClassName("tg-time-sec");
+    
+    if ( primaryTZs.length != secondTZs.length ) {
+        // secondary timezone display is disabled
+        return;
     }
 
     var topCont = document.getElementById("topcontainerwk");
