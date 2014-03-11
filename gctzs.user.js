@@ -54,8 +54,8 @@ function gctzsMain(selectedTZ) {
     are what get displayed in the dropdown box, and should be short strings <6
     characters. The default timezone to display is the first one in the list. */
     const TZ_OF_LABEL = {
+        "sea"   :"America/Los_Angeles", 
         "chi"   :"America/Chicago",
-        "la"   :"America/Los_Angeles", 
     };
 
     function tzSwitch() {
